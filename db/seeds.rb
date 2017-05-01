@@ -21,3 +21,14 @@
  User.create!(email: "student@test.com", password: "password", password_confirmation: "password", first_name: "Jane", last_name: "Snow", username: "learner", role: "student")
  
  puts "Student user created"
+ 
+ 50.times do |post|
+  Post.create!(
+    title: "My Post #{post}",
+    content: "Some amazing content here",
+    topic_id: Topic.last.id,
+    user_id: User.last.id
+  )
+end
+
+puts "50 posts were created"
