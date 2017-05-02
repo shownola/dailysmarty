@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       end
     end
     
+
     get 'posts/new', to: 'topics/posts#new', as: 'new_post'
     post 'posts', to: 'topics/posts#create', as: 'create_post'
 
