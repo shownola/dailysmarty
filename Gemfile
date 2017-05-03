@@ -26,6 +26,10 @@ gem 'devise', '~> 3.5', '>= 3.5.5'
 gem 'friendly_id', '~> 5.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'kaminari', '~> 0.17.0'
+gem 'pundit', '~> 1.1'
+gem 'gritter', '1.2.0'
+gem "administrate", "~> 0.2.2"
+gem 'bourbon'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
