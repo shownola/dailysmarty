@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery with: :exception
   
+  
+  
   def current_user
     super || OpenStruct.new(full_name: 'Guest')
   end
@@ -16,4 +18,6 @@ class ApplicationController < ActionController::Base
     flash[:alert] = "You are not authorized to access this page"
     redirect_to(request.referrer || root_path)
   end
+  
+ 
 end
