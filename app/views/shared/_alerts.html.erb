@@ -1,2 +1,10 @@
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
+   
+<% if flash[:alert] %>
+  <%= js add_gritter(flash[:alert], title: "DailySmarty Alert", sticky: false, time: 2000, image: :warning) %>
+<% elsif flash[:error] %>
+  <% js add_gritter(flash[:error], title: "DailySmarty Error", sticky: false, time: 1500, image: :error) %>
+<% else %>
+   <%= js add_gritter(flash[:notice], title: "DailySmarty Notifications", sticky: false, time: 2000, image: :notice) %>
+<% end %>

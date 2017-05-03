@@ -103,6 +103,7 @@ require 'rails_helper'
         end
         
         it 'allows a user to edit a post they created' do
+         
           fill_in 'post[title]', with: "Baseball Stats"
           
           click_on "Save"
@@ -114,7 +115,7 @@ require 'rails_helper'
           logout(:user)
           login_as(@second_user, :scope => :user)
           visit edit_topic_post_path(topic_id: @topic.id, id: @post.id)
-          expect(current_path).to eq(topic_post_path(topic_id: @topic.id, id: @post.id))
+          expect(current_path).to eq(root_path)
         end
       end
   end
